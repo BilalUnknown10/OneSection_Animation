@@ -21,11 +21,12 @@ function App() {
       spanTag += ` <span>${elem}</span>`;
     })
     heading.innerHTML = spanTag;
+
+    let time = gsap.timeline();
     
-    gsap.to("h1 span", {
+    time.to("h1 span", {
       opacity:0,
       duration:1,
-      // delay:1,
       color:"green",
       stagger:1,
       scrollTrigger : {
